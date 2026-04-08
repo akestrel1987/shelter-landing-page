@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '../components/ui/dialog';
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -21,6 +28,7 @@ import { communityData, socialLinks } from '../data/mock';
 
 const LandingPage = () => {
   const [copiedIp, setCopiedIp] = useState('');
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   const copyToClipboard = (text, type) => {
     navigator.clipboard.writeText(text);
@@ -196,18 +204,14 @@ const LandingPage = () => {
                   </ul>
                 </div>
 
-                <a 
-                  href={communityData.minecraft.squaremapUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-link-full"
+                <Button 
+                  className="btn-primary btn-full minecraft-btn"
+                  onClick={() => setIsMapOpen(true)}
                 >
-                  <Button className="btn-primary btn-full minecraft-btn">
-                    <MapPin className="btn-icon" />
-                    View Live Map
-                    <ExternalLink className="btn-icon" size={16} />
-                  </Button>
-                </a>
+                  <MapPin className="btn-icon" />
+                  View Live Map
+                  <ExternalLink className="btn-icon" size={16} />
+                </Button>
               </div>
             </Card>
           </div>
@@ -420,6 +424,31 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
+
+      {/* Squaremap Modal */}
+      <Dialog open={isMapOpen} onOpenChange={setIsMapOpen}>
+        <DialogContent className="squaremap-modal">
+          <DialogHeader>
+            <DialogTitle className="squaremap-modal-title">
+              <MapPin size={24} />
+              The Shelter Minecraft - Live Map
+            </DialogTitle>
+            <DialogDescription className="squaremap-modal-description">
+              Explore our Minecraft world in real-time
+            </DialogDescription>
+          </DialogHeader>
+          <div className="squaremap-iframe-container">
+            {isMapOpen && (
+              <iframe
+                src={communityData.minecraft.squaremapUrl}
+                title="The Shelter Minecraft Live Map"
+                className="squaremap-iframe"
+                loading="lazy"
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

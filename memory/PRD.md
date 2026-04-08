@@ -55,7 +55,12 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
    - **Java Edition 1.21.1**:
      - Address: most-clarity.gl.joinmc.link
    - Server features list (cross-platform, active community, custom plugins)
-   - "View Live Map" button linking to Squaremap
+   - **Embedded Squaremap Modal**:
+     - Click "View Live Map" opens modal overlay
+     - Lazy-loads iframe (keeps page snappy)
+     - Full-screen map viewing experience
+     - Close button to return to landing page
+     - Green-themed modal design
    - Green-themed card borders and hover effects
    - Organized edition sections for easy navigation
 4. ✓ **Ark Survival Ascended section (CYAN/BLUE THEME)** with:
