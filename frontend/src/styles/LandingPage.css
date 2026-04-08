@@ -725,6 +725,10 @@
   .mods-list {
     grid-template-columns: 1fr;
   }
+  
+  .mods-grid {
+    grid-template-columns: 1fr;
+  }
 
   .coming-soon-content {
     padding: 3rem 1.5rem;
@@ -733,6 +737,11 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .ark-panel-image {
+    max-height: 300px;
+    object-fit: cover;
   }
 }
 
@@ -846,11 +855,75 @@
 .ark-card {
   border-color: var(--ark-border);
   background: linear-gradient(135deg, rgba(0, 61, 92, 0.2) 0%, var(--bg-card) 100%);
+  overflow: hidden;
 }
 
 .ark-card:hover {
   border-color: var(--ark-primary);
   box-shadow: 0 8px 32px var(--ark-glow);
+}
+
+.ark-hero-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.ark-panel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ark-subtitle {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ark-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 107, 53, 0.1);
+  border-left: 3px solid var(--ark-accent);
+  display: inline-block;
+}
+
+.ark-maps-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ark-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid var(--ark-border);
+  border-radius: 8px;
+}
+
+.ark-welcome {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 168, 204, 0.15);
+  border: 1px solid var(--ark-border);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.ark-welcome p {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ark-light);
+  margin: 0;
+}
+
+.server-details-section {
+  margin-top: 2rem;
 }
 
 #ark .subsection-title {
@@ -863,6 +936,11 @@
 
 #ark .detail-list li::before {
   color: var(--ark-primary);
+}
+
+.mods-grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
 }
 
 .server-search-box {
@@ -903,6 +981,7 @@
 #ark .accordion-trigger {
   background: rgba(0, 61, 92, 0.3);
   color: var(--ark-light);
+  font-size: 1.125rem;
 }
 
 #ark .accordion-trigger:hover {

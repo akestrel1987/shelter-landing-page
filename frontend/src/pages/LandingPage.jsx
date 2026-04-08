@@ -157,7 +157,16 @@ const LandingPage = () => {
           </div>
 
           <Card className="game-card ark-card">
+            <div className="ark-hero-section">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_game-portal-343/artifacts/pa7etvbd_Shelter%20Ark%20Paneledit.png"
+                alt="The Shelter Ark - Come Relax"
+                className="ark-panel-image"
+              />
+            </div>
+            
             <div className="card-content-main">
+              <div className="ark-subtitle">{communityData.ark.subtitle}</div>
               <p className="card-description">{communityData.ark.description}</p>
               
               <div className="server-search-box">
@@ -170,36 +179,83 @@ const LandingPage = () => {
                 </div>
               </div>
 
-              <div className="maps-section">
-                <h3 className="subsection-title">Available Maps</h3>
+              <div className="ark-maps-info">
+                <MapPin size={20} />
+                <span>{communityData.ark.availableMaps}</span>
+              </div>
+
+              <div className="ark-welcome">
+                <p>{communityData.ark.welcomeMessage}</p>
+              </div>
+
+              <div className="server-details-section">
+                <h3 className="subsection-title">Server Details</h3>
                 <Accordion type="single" collapsible className="maps-accordion">
-                  {communityData.ark.maps.map((map, index) => (
-                    <AccordionItem key={index} value={`map-${index}`}>
-                      <AccordionTrigger className="accordion-trigger">
-                        {map.name}
-                      </AccordionTrigger>
-                      <AccordionContent className="accordion-content">
-                        <div className="map-details">
-                          <div className="detail-section">
-                            <h4 className="detail-title">Server Features</h4>
-                            <ul className="detail-list">
-                              {map.features.map((feature, idx) => (
-                                <li key={idx}>{feature}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="detail-section">
-                            <h4 className="detail-title">Installed Mods</h4>
-                            <ul className="detail-list mods-list">
-                              {map.mods.map((mod, idx) => (
-                                <li key={idx}>{mod}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  
+                  {/* Cluster Mods */}
+                  <AccordionItem value="mods">
+                    <AccordionTrigger className="accordion-trigger">
+                      Mods on the Whole Cluster ({communityData.ark.clusterMods.length} Mods)
+                    </AccordionTrigger>
+                    <AccordionContent className="accordion-content">
+                      <div className="detail-section">
+                        <ul className="detail-list mods-grid">
+                          {communityData.ark.clusterMods.map((mod, idx) => (
+                            <li key={idx}>{mod}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Player Tweaks */}
+                  <AccordionItem value="player">
+                    <AccordionTrigger className="accordion-trigger">
+                      Player Tweaks ({communityData.ark.playerTweaks.length} Adjustments)
+                    </AccordionTrigger>
+                    <AccordionContent className="accordion-content">
+                      <div className="detail-section">
+                        <ul className="detail-list">
+                          {communityData.ark.playerTweaks.map((tweak, idx) => (
+                            <li key={idx}>{tweak}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Dino Tweaks */}
+                  <AccordionItem value="dino">
+                    <AccordionTrigger className="accordion-trigger">
+                      Dino Tweaks ({communityData.ark.dinoTweaks.length} Adjustments)
+                    </AccordionTrigger>
+                    <AccordionContent className="accordion-content">
+                      <div className="detail-section">
+                        <ul className="detail-list">
+                          {communityData.ark.dinoTweaks.map((tweak, idx) => (
+                            <li key={idx}>{tweak}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Other Tweaks */}
+                  <AccordionItem value="other">
+                    <AccordionTrigger className="accordion-trigger">
+                      Other Server Tweaks ({communityData.ark.otherTweaks.length} Adjustments)
+                    </AccordionTrigger>
+                    <AccordionContent className="accordion-content">
+                      <div className="detail-section">
+                        <ul className="detail-list">
+                          {communityData.ark.otherTweaks.map((tweak, idx) => (
+                            <li key={idx}>{tweak}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
                 </Accordion>
               </div>
             </div>
