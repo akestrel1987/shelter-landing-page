@@ -95,44 +95,48 @@ const LandingPage = () => {
                 <h3 className="card-title">Server Information</h3>
                 <p className="card-description">{communityData.minecraft.description}</p>
                 
-                <div className="server-ip-box">
-                  <div className="ip-label">
-                    <Server size={20} />
-                    <span>Server IP:</span>
+                {communityData.minecraft.serverIp !== "[Server IP - To be added]" && (
+                  <div className="server-ip-box">
+                    <div className="ip-label">
+                      <Server size={20} />
+                      <span>Server IP:</span>
+                    </div>
+                    <div className="ip-display">
+                      <code>{communityData.minecraft.serverIp}</code>
+                      <Button 
+                        className="btn-secondary btn-small"
+                        onClick={() => copyToClipboard(communityData.minecraft.serverIp, 'minecraft')}
+                      >
+                        {copiedIp === 'minecraft' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
                   </div>
-                  <div className="ip-display">
-                    <code>{communityData.minecraft.serverIp}</code>
-                    <Button 
-                      className="btn-secondary btn-small"
-                      onClick={() => copyToClipboard(communityData.minecraft.serverIp, 'minecraft')}
-                    >
-                      {copiedIp === 'minecraft' ? 'Copied!' : 'Copy'}
-                    </Button>
+                )}
+
+                {communityData.minecraft.serverIp === "[Server IP - To be added]" && (
+                  <div className="info-box">
+                    <p className="info-text">Server details will be added soon. Join our Discord for updates!</p>
                   </div>
-                </div>
+                )}
 
-                <div className="player-count">
-                  <Users size={20} />
-                  <span>
-                    {communityData.minecraft.playerCount}/{communityData.minecraft.maxPlayers} Players Online
-                  </span>
-                </div>
-
-                <div className="feature-list">
-                  <h4 className="feature-title">Features:</h4>
-                  <ul className="features">
-                    {communityData.minecraft.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
+                {communityData.minecraft.features[0] !== "[Features to be added - Please provide your server features]" && (
+                  <div className="feature-list">
+                    <h4 className="feature-title">Features:</h4>
+                    <ul className="features">
+                      {communityData.minecraft.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 <a 
                   href={communityData.minecraft.squaremapUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  className="btn-link-full"
                 >
-                  <Button className="btn-primary btn-full">
+                  <Button className="btn-primary btn-full minecraft-btn">
                     <MapPin className="btn-icon" />
                     View Live Map
                     <ExternalLink className="btn-icon" size={16} />
@@ -152,31 +156,18 @@ const LandingPage = () => {
             <h2 className="section-title">{communityData.ark.title}</h2>
           </div>
 
-          <Card className="game-card">
+          <Card className="game-card ark-card">
             <div className="card-content-main">
               <p className="card-description">{communityData.ark.description}</p>
               
-              <div className="server-ip-box">
-                <div className="ip-label">
+              <div className="server-search-box">
+                <div className="search-label">
                   <Server size={20} />
-                  <span>Server IP:</span>
+                  <span>How to Find Our Cluster:</span>
                 </div>
-                <div className="ip-display">
-                  <code>{communityData.ark.serverIp}</code>
-                  <Button 
-                    className="btn-secondary btn-small"
-                    onClick={() => copyToClipboard(communityData.ark.serverIp, 'ark')}
-                  >
-                    {copiedIp === 'ark' ? 'Copied!' : 'Copy'}
-                  </Button>
+                <div className="search-instructions">
+                  <p>{communityData.ark.searchInstructions}</p>
                 </div>
-              </div>
-
-              <div className="player-count">
-                <Users size={20} />
-                <span>
-                  {communityData.ark.playerCount}/{communityData.ark.maxPlayers} Players Online
-                </span>
               </div>
 
               <div className="maps-section">

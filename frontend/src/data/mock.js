@@ -1,82 +1,52 @@
 // Mock data for gaming community landing page
 export const communityData = {
-  name: "Epic Gaming Community",
+  name: "The Shelter",
   tagline: "Join our thriving community of gamers",
-  discordInvite: "https://discord.gg/your-invite-link",
+  discordInvite: "https://discord.gg/NUuwfMQ9zD",
+  mainDomain: "thesheltercommunity.servegame.net",
   
   minecraft: {
-    title: "Minecraft",
+    title: "The Shelter Minecraft",
     description: "Explore our vast survival world with custom plugins and an active community",
-    serverIp: "mc.yourdomain.com",
-    squaremapUrl: "https://map.yourdomain.com",
+    serverIp: "[Server IP - To be added]",
+    squaremapUrl: "http://thesheltercommunity.servegame.net/sheltermcmap",
     features: [
-      "Custom Survival World",
-      "Economy System",
-      "Land Claiming",
-      "Custom Enchantments",
-      "Regular Events"
+      "[Features to be added - Please provide your server features]"
     ],
-    playerCount: 45,
-    maxPlayers: 100
+    playerCount: 0,
+    maxPlayers: 100,
+    serverDetails: "[Additional server details to be added when available]"
   },
   
   ark: {
-    title: "Ark Survival Ascended",
-    description: "Experience enhanced survival with quality of life mods and balanced gameplay",
-    serverIp: "ark.yourdomain.com:27015",
+    title: "The Shelter Ark Cluster",
+    description: "Experience enhanced survival with quality of life mods and balanced gameplay on our cluster",
+    searchInstructions: "[Search instructions to be added - How to find the cluster in-game]",
     maps: [
       {
-        name: "The Island",
+        name: "Map 1 (Details Coming Soon)",
         features: [
-          "5x XP Rates",
-          "10x Taming",
-          "15x Harvesting",
-          "Increased Stack Sizes",
-          "Quality of Life Mods"
+          "[Server rates and features to be added]"
         ],
         mods: [
-          "Awesome SpyGlass",
-          "Super Structures",
-          "Dino Storage v2",
-          "Automated Ark",
-          "Utilities Plus",
-          "Better Breeding",
-          "Stack Mods",
-          "UI Enhancements"
-        ]
-      },
-      {
-        name: "Scorched Earth",
-        features: [
-          "5x XP Rates",
-          "10x Taming",
-          "15x Harvesting",
-          "Custom Drops",
-          "Balanced PvE"
-        ],
-        mods: [
-          "Awesome SpyGlass",
-          "Super Structures",
-          "Dino Storage v2",
-          "Resource Stacks",
-          "Custom Recipes"
+          "[Mod list to be provided]"
         ]
       }
     ],
-    playerCount: 28,
+    playerCount: 0,
     maxPlayers: 70
   },
   
   palworld: {
-    title: "Palworld",
+    title: "The Shelter Palworld",
     description: "Coming Soon",
     status: "under-construction",
-    estimatedLaunch: "Q2 2025"
+    estimatedLaunch: "TBA"
   }
 };
 
 export const socialLinks = {
-  discord: "https://discord.gg/your-invite-link",
+  discord: "https://discord.gg/NUuwfMQ9zD",
   twitter: "",
   youtube: "",
   twitch: ""

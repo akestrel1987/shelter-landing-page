@@ -32,58 +32,61 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
 ### Phase 1: Frontend with Mock Data ✓
 **Date**: December 2025
 
-**Files Created**:
-- `/app/frontend/src/data/mock.js` - Mock data for all game servers
-- `/app/frontend/src/pages/LandingPage.jsx` - Main landing page component
-- `/app/frontend/src/styles/LandingPage.css` - Neon-tech design system styles
+**Files Created/Modified**:
+- `/app/frontend/src/data/mock.js` - Mock data with The Shelter branding and placeholders
+- `/app/frontend/src/pages/LandingPage.jsx` - Main landing page component with game-specific sections
+- `/app/frontend/src/styles/LandingPage.css` - Neon-tech design + game-specific color themes
 - `/app/frontend/src/App.js` - Updated routing
 - `/app/frontend/src/App.css` - Base styles
 
 **Features Implemented**:
-1. ✓ Fixed navigation with smooth scrolling
-2. ✓ Hero section with gaming setup background image
-3. ✓ Minecraft server section with:
-   - Server information card
-   - Copyable server IP
-   - Player count display (mock: 45/100)
-   - Features list
-   - "View Live Map" button (links to Squaremap)
-4. ✓ Ark Survival Ascended section with:
-   - Server information
-   - Copyable server IP
-   - Player count display (mock: 28/70)
-   - Accordion component for multiple maps (The Island, Scorched Earth)
-   - Each map shows Server Features and Installed Mods
-5. ✓ Palworld coming soon section with:
+1. ✓ Fixed navigation with smooth scrolling and The Shelter branding
+2. ✓ Hero section with gaming setup background
+3. ✓ **Minecraft section (GREEN THEME)** with:
+   - Official Minecraft green color palette (#7FB83B grass green)
+   - Server information card with green accents
+   - Placeholder for server IP (to be added)
+   - "View Live Map" button linking to thesheltercommunity.servegame.net/sheltermcmap
+   - Green-themed card borders and hover effects
+4. ✓ **Ark Survival Ascended section (CYAN/BLUE THEME)** with:
+   - Official Ark cyan/blue color palette (#00D4FF bright cyan)
+   - Server information with cyan accents
+   - "How to Find Our Cluster" box (placeholder for search instructions)
+   - Accordion component for maps (placeholder for map details)
+   - Cyan-themed card borders and glow effects
+5. ✓ **Palworld section (BLUE/PURPLE THEME)** with:
+   - Official Palworld blue/purple color palette
    - Construction icon
    - Coming soon message
-   - Estimated launch date (Q2 2025)
+   - Estimated launch: TBA
+   - Purple gradient title effect
    - Discord CTA for updates
-6. ✓ Footer with quick links and community section
+6. ✓ Footer with The Shelter branding and quick links
 7. ✓ Responsive design (mobile, tablet, desktop)
-8. ✓ Copy to clipboard functionality for server IPs
-9. ✓ Smooth animations and hover effects
-10. ✓ Neon-tech design system fully implemented
+8. ✓ Smooth animations and game-specific hover effects
+9. ✓ Game-specific color theming for visual distinction
 
 **Design Highlights**:
-- Dark background (#1a1c1b) with lime green accents (#d9fb06)
-- Pill-shaped buttons with hover animations
+- Dark background (#1a1c1b) base with game-specific accent colors
+- **Minecraft**: Grass green (#7FB83B) with dark green accents
+- **Ark**: Bright cyan (#00D4FF) with teal and orange accents
+- **Palworld**: Blue-to-purple gradient (#4A90E2 to #9B59B6)
+- Each section has unique color borders, glows, and hover effects
 - High contrast text for readability
-- Gaming-themed hero image with overlay
-- Accordion component for organized mod/feature lists
-- Glassmorphic effects on cards
+- Gaming-themed hero image
 - Mobile-optimized navigation
 
 ## Prioritized Backlog
 
 ### P0 Features (Required for Production)
-1. **Content Customization**:
-   - Replace "Epic Gaming Community" with actual community name
-   - Update Discord invite link
-   - Update Squaremap URL for Minecraft
-   - Update server IPs for all games
-   - Update Ark features and mods lists
-   - Update Palworld launch date
+1. **Content Customization - Waiting for User Input**:
+   - ✓ Community name updated to "The Shelter"
+   - ✓ Discord invite link updated: https://discord.gg/NUuwfMQ9zD
+   - ✓ Squaremap URL updated: thesheltercommunity.servegame.net/sheltermcmap
+   - ⏳ **NEEDED**: Minecraft server IP and features list
+   - ⏳ **NEEDED**: Ark cluster search instructions (how to find in-game)
+   - ⏳ **NEEDED**: Ark maps list with features and mods for each map
+   - ⏳ **NEEDED**: Palworld estimated launch date
 
 ### P1 Features (High Priority Enhancements)
 1. **Backend Integration**:
@@ -114,21 +117,23 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
    - Performance optimizations
 
 ## Next Tasks
-1. Gather actual content from user:
-   - Community name and branding
-   - Discord invite link
-   - Squaremap URL
-   - Server IPs for all games
-   - Complete Ark features/mods lists
-   - Palworld launch date
-2. Update mock.js with real data
+1. **Awaiting User Content**:
+   - Minecraft server IP and detailed features list
+   - Ark cluster search instructions for in-game discovery
+   - Complete Ark maps list with server rates, features, and mods
+   - Palworld estimated launch date
+2. Update `/app/frontend/src/data/mock.js` with provided content
 3. Test all links and functionality
-4. Optional: Add backend for dynamic player counts
-5. Optional: Deploy to production server
+4. Deploy to thesheltercommunity.servegame.net
+5. Optional: Add backend for dynamic player counts and server status
 
 ## Notes
-- All data is currently MOCKED in `/app/frontend/src/data/mock.js`
-- Easy to update placeholder content
-- Design follows neon-tech guidelines strictly
+- All data currently uses placeholders in `/app/frontend/src/data/mock.js`
+- Game-specific color themes implemented:
+  - Minecraft: Green (#7FB83B)
+  - Ark: Cyan (#00D4FF)
+  - Palworld: Blue/Purple gradient
+- Squaremap link is ready: thesheltercommunity.servegame.net/sheltermcmap
+- Discord link active: https://discord.gg/NUuwfMQ9zD
 - No backend required for static version
-- Can run on local server as mentioned by user
+- Ready for local server deployment at thesheltercommunity.servegame.net

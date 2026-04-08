@@ -26,6 +26,34 @@
   /* Secondary Colors */
   --secondary-olive: #3f4816;
   --secondary-yellow: #f8d47a;
+  
+  /* Game-Specific Color Palettes */
+  /* Minecraft Colors */
+  --mc-primary: #7FB83B;        /* Grass green */
+  --mc-secondary: #4A7B2A;      /* Dark green */
+  --mc-accent: #8B4513;         /* Brown/dirt */
+  --mc-light: #9BCF53;          /* Light green */
+  --mc-dark: #2D5016;           /* Very dark green */
+  --mc-border: rgba(127, 184, 59, 0.3);
+  --mc-glow: rgba(127, 184, 59, 0.2);
+  
+  /* Ark Survival Ascended Colors */
+  --ark-primary: #00D4FF;       /* Bright cyan/blue */
+  --ark-secondary: #00A8CC;     /* Teal */
+  --ark-accent: #FF6B35;        /* Orange accent */
+  --ark-dark: #003D5C;          /* Dark blue */
+  --ark-light: #66E3FF;         /* Light cyan */
+  --ark-border: rgba(0, 212, 255, 0.3);
+  --ark-glow: rgba(0, 212, 255, 0.2);
+  
+  /* Palworld Colors */
+  --pal-primary: #4A90E2;       /* Blue */
+  --pal-secondary: #9B59B6;     /* Purple */
+  --pal-accent: #E91E63;        /* Pink */
+  --pal-light: #6BB6FF;         /* Light blue */
+  --pal-dark: #2E5C8A;          /* Dark blue */
+  --pal-border: rgba(74, 144, 226, 0.3);
+  --pal-glow: rgba(155, 89, 182, 0.2);
 }
 
 .landing-page {
@@ -731,3 +759,201 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+/* Game-Specific Section Theming */
+
+/* Minecraft Section */
+#minecraft .section-icon {
+  color: var(--mc-primary);
+}
+
+#minecraft .section-title {
+  color: var(--mc-primary);
+}
+
+#minecraft .game-card {
+  border-color: var(--mc-border);
+  background: linear-gradient(135deg, rgba(45, 80, 22, 0.15) 0%, var(--bg-card) 100%);
+}
+
+#minecraft .game-card:hover {
+  border-color: var(--mc-primary);
+  box-shadow: 0 8px 32px var(--mc-glow);
+}
+
+#minecraft .card-title,
+#minecraft .feature-title {
+  color: var(--mc-primary);
+}
+
+#minecraft .features li::before {
+  color: var(--mc-primary);
+}
+
+#minecraft .info-box {
+  background: var(--mc-glow);
+  border: 1px solid var(--mc-border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+#minecraft .info-text {
+  color: var(--mc-light);
+  font-weight: 500;
+  text-align: center;
+}
+
+#minecraft .server-ip-box {
+  background: rgba(45, 80, 22, 0.3);
+  border: 1px solid var(--mc-border);
+}
+
+#minecraft .server-ip-box code {
+  color: var(--mc-primary);
+  background: var(--mc-glow);
+}
+
+.minecraft-btn {
+  background: var(--mc-primary);
+  color: var(--mc-dark);
+}
+
+.minecraft-btn:hover {
+  background: var(--mc-light);
+  transform: scale(1.02);
+}
+
+.btn-link-full {
+  text-decoration: none;
+  display: block;
+}
+
+/* Ark Section */
+#ark {
+  background: linear-gradient(180deg, rgba(0, 61, 92, 0.1) 0%, rgba(48, 47, 44, 0.3) 100%);
+}
+
+#ark .section-icon {
+  color: var(--ark-primary);
+}
+
+#ark .section-title {
+  color: var(--ark-primary);
+}
+
+.ark-card {
+  border-color: var(--ark-border);
+  background: linear-gradient(135deg, rgba(0, 61, 92, 0.2) 0%, var(--bg-card) 100%);
+}
+
+.ark-card:hover {
+  border-color: var(--ark-primary);
+  box-shadow: 0 8px 32px var(--ark-glow);
+}
+
+#ark .subsection-title {
+  color: var(--ark-primary);
+}
+
+#ark .detail-title {
+  color: var(--ark-primary);
+}
+
+#ark .detail-list li::before {
+  color: var(--ark-primary);
+}
+
+.server-search-box {
+  background: rgba(0, 61, 92, 0.3);
+  border: 1px solid var(--ark-border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.search-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ark-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.search-instructions {
+  color: var(--text-white);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0.75rem;
+  background: rgba(0, 212, 255, 0.05);
+  border-left: 3px solid var(--ark-primary);
+  border-radius: 4px;
+}
+
+#ark .maps-accordion {
+  border: 1px solid var(--ark-border);
+  background: rgba(0, 61, 92, 0.2);
+}
+
+#ark .accordion-trigger {
+  background: rgba(0, 61, 92, 0.3);
+  color: var(--ark-light);
+}
+
+#ark .accordion-trigger:hover {
+  background: rgba(0, 168, 204, 0.2);
+  color: var(--ark-primary);
+}
+
+#ark .accordion-content {
+  background: rgba(0, 61, 92, 0.15);
+}
+
+#ark .detail-section {
+  background: rgba(0, 61, 92, 0.3);
+  border: 1px solid var(--ark-border);
+}
+
+/* Palworld Section */
+#palworld .section-icon {
+  color: var(--pal-primary);
+}
+
+#palworld .section-title {
+  color: var(--pal-primary);
+}
+
+.coming-soon-card {
+  border-color: var(--pal-border);
+  background: linear-gradient(135deg, var(--pal-glow) 0%, var(--bg-card) 100%);
+}
+
+.coming-soon-card:hover {
+  border-color: var(--pal-primary);
+  box-shadow: 0 8px 32px var(--pal-glow);
+}
+
+.construction-icon {
+  color: var(--pal-secondary);
+  opacity: 0.4;
+}
+
+.coming-soon-title {
+  color: var(--pal-primary);
+  background: linear-gradient(135deg, var(--pal-primary) 0%, var(--pal-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.estimated-launch {
+  background: var(--pal-glow);
+  border: 1px solid var(--pal-border);
+  color: var(--pal-light);
+}
+
