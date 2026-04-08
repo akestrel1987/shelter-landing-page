@@ -179,9 +179,35 @@ const LandingPage = () => {
                 </div>
               </div>
 
-              <div className="ark-maps-info">
-                <MapPin size={20} />
-                <span>{communityData.ark.availableMaps}</span>
+              <div className="ark-maps-section">
+                <h3 className="maps-section-title">
+                  <MapPin size={24} />
+                  Available Maps
+                </h3>
+                
+                <div className="maps-container">
+                  <div className="maps-category">
+                    <h4 className="maps-category-title">Main Maps ({communityData.ark.mainMaps.length})</h4>
+                    <div className="maps-grid">
+                      {communityData.ark.mainMaps.map((map, index) => (
+                        <div key={index} className="map-badge">
+                          {map}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="maps-category">
+                    <h4 className="maps-category-title">DLC Maps ({communityData.ark.dlcMaps.length})</h4>
+                    <div className="maps-grid">
+                      {communityData.ark.dlcMaps.map((map, index) => (
+                        <div key={index} className="map-badge map-badge-dlc">
+                          {map}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="ark-welcome">

@@ -23,7 +23,22 @@ export const communityData = {
     subtitle: "[NEW | ASA | PvPvE | MODDED | CROSSPLAY]",
     description: "Active Community/Admins/Mods. Dedicated Hardware (Not on Nitrado). New & active community focused on somewhat vanilla gameplay with tweaks to make it not too hard nor too easy, just right. We'll be adding more maps upon release, with the possibility of modded maps as well. Trying to make it feel DANGEROUS while being on for only a couple of hours a few days a week (We all have lives).",
     searchInstructions: "Type 'The Shelter Ark' in Unofficial Tab; Select the checkbox for Player Servers; Make sure Maps dropdown & Type dropdown are set to ALL",
-    availableMaps: "ALL STANDARD MAPS + Club Ark",
+    
+    mainMaps: [
+      "The Island",
+      "Center",
+      "Scorched Earth",
+      "Aberration",
+      "Extinction",
+      "Valguero",
+      "Ragnarok",
+      "Club Ark"
+    ],
+    
+    dlcMaps: [
+      "Lost Colony",
+      "Astraeos"
+    ],
     
     clusterMods: [
       "AdminPanel",
@@ -38,7 +53,7 @@ export const communityData = {
       "Net Projectile",
       "Pelayori's Cryo Storage/API Utils",
       "Solo Farm Mod",
-      "Starter Pack (Soon)",
+      "Starter Pack",
       "Stop the Steal",
       "TG's Stacking 10,000-90",
       "Utilities +",

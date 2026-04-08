@@ -54,15 +54,17 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
    - Server type badge: [NEW | ASA | PvPvE | MODDED | CROSSPLAY]
    - Complete server description
    - "How to Find Our Cluster" instructions box
-   - Available maps display: "ALL STANDARD MAPS + Club Ark"
+   - **Available Maps Display**:
+     - Main Maps (8): The Island, Center, Scorched Earth, Aberration, Extinction, Valguero, Ragnarok, Club Ark
+     - DLC Maps (2): Lost Colony, Astraeos - displayed with orange badges
    - "Welcoming both new & seasoned players!" message box
    - **4 Organized Accordion Sections**:
-     - Mods on the Whole Cluster (20 mods)
+     - Mods on the Whole Cluster (20 mods) - updated "Starter Pack" to active
      - Player Tweaks (11 adjustments)
      - Dino Tweaks (12 adjustments)
      - Other Server Tweaks (7 settings)
    - Cyan-themed card borders and glow effects
-   - Orange accent for server type badge
+   - Orange accent for DLC map badges and server type badge
 5. ✓ **Palworld section (BLUE/PURPLE THEME)** with:
    - Official Palworld blue/purple color palette
    - Construction icon
