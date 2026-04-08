@@ -8,14 +8,33 @@ export const communityData = {
   minecraft: {
     title: "The Shelter Minecraft",
     description: "Explore our vast survival world with custom plugins and an active community",
-    serverIp: "[Server IP - To be added]",
     squaremapUrl: "http://thesheltercommunity.servegame.net/sheltermcmap",
+    
+    bedrockPC: {
+      address: "share-hollow.gl.at.ply.gg",
+      port: "25662",
+      directIP: "147.185.221.17"
+    },
+    
+    bedrockConsole: {
+      gamertag: "ShelterArkMC",
+      instructions: "Add ShelterArkMC to your Xbox Live Friends List and join using the Social menu"
+    },
+    
+    java: {
+      version: "1.21.1",
+      address: "most-clarity.gl.joinmc.link"
+    },
+    
     features: [
-      "[Features to be added - Please provide your server features]"
+      "Cross-platform play (Bedrock & Java)",
+      "Active community and staff",
+      "Custom plugins and features",
+      "Regular events and updates",
+      "Live world map available"
     ],
     playerCount: 0,
-    maxPlayers: 100,
-    serverDetails: "[Additional server details to be added when available]"
+    maxPlayers: 100
   },
   
   ark: {

@@ -95,40 +95,106 @@ const LandingPage = () => {
                 <h3 className="card-title">Server Information</h3>
                 <p className="card-description">{communityData.minecraft.description}</p>
                 
-                {communityData.minecraft.serverIp !== "[Server IP - To be added]" && (
+                {/* Bedrock PC Section */}
+                <div className="mc-edition-section">
+                  <h4 className="mc-edition-title">
+                    <Server size={20} />
+                    Bedrock Edition (PC)
+                  </h4>
                   <div className="server-ip-box">
                     <div className="ip-label">
-                      <Server size={20} />
-                      <span>Server IP:</span>
+                      <span>Address:</span>
                     </div>
                     <div className="ip-display">
-                      <code>{communityData.minecraft.serverIp}</code>
+                      <code>{communityData.minecraft.bedrockPC.address}</code>
                       <Button 
                         className="btn-secondary btn-small"
-                        onClick={() => copyToClipboard(communityData.minecraft.serverIp, 'minecraft')}
+                        onClick={() => copyToClipboard(communityData.minecraft.bedrockPC.address, 'bedrock-address')}
                       >
-                        {copiedIp === 'minecraft' ? 'Copied!' : 'Copy'}
+                        {copiedIp === 'bedrock-address' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
+                    <div className="ip-label mt-2">
+                      <span>Port:</span>
+                    </div>
+                    <div className="ip-display">
+                      <code>{communityData.minecraft.bedrockPC.port}</code>
+                      <Button 
+                        className="btn-secondary btn-small"
+                        onClick={() => copyToClipboard(communityData.minecraft.bedrockPC.port, 'bedrock-port')}
+                      >
+                        {copiedIp === 'bedrock-port' ? 'Copied!' : 'Copy'}
                       </Button>
                     </div>
                   </div>
-                )}
-
-                {communityData.minecraft.serverIp === "[Server IP - To be added]" && (
-                  <div className="info-box">
-                    <p className="info-text">Server details will be added soon. Join our Discord for updates!</p>
+                  
+                  <div className="server-ip-box mt-3">
+                    <div className="ip-label">
+                      <span>Direct IP:</span>
+                    </div>
+                    <div className="ip-display">
+                      <code>{communityData.minecraft.bedrockPC.directIP}:{communityData.minecraft.bedrockPC.port}</code>
+                      <Button 
+                        className="btn-secondary btn-small"
+                        onClick={() => copyToClipboard(`${communityData.minecraft.bedrockPC.directIP}:${communityData.minecraft.bedrockPC.port}`, 'bedrock-direct')}
+                      >
+                        {copiedIp === 'bedrock-direct' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
                   </div>
-                )}
+                </div>
 
-                {communityData.minecraft.features[0] !== "[Features to be added - Please provide your server features]" && (
-                  <div className="feature-list">
-                    <h4 className="feature-title">Features:</h4>
-                    <ul className="features">
-                      {communityData.minecraft.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
+                {/* Bedrock Console Section */}
+                <div className="mc-edition-section">
+                  <h4 className="mc-edition-title">
+                    <Users size={20} />
+                    Bedrock Edition (Console)
+                  </h4>
+                  <div className="console-instructions">
+                    <p>{communityData.minecraft.bedrockConsole.instructions}</p>
+                    <div className="gamertag-box">
+                      <span className="gamertag-label">Xbox Gamertag:</span>
+                      <code className="gamertag">{communityData.minecraft.bedrockConsole.gamertag}</code>
+                      <Button 
+                        className="btn-secondary btn-small"
+                        onClick={() => copyToClipboard(communityData.minecraft.bedrockConsole.gamertag, 'gamertag')}
+                      >
+                        {copiedIp === 'gamertag' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
                   </div>
-                )}
+                </div>
+
+                {/* Java Section */}
+                <div className="mc-edition-section">
+                  <h4 className="mc-edition-title">
+                    <Server size={20} />
+                    Java Edition {communityData.minecraft.java.version}
+                  </h4>
+                  <div className="server-ip-box">
+                    <div className="ip-label">
+                      <span>Server Address:</span>
+                    </div>
+                    <div className="ip-display">
+                      <code>{communityData.minecraft.java.address}</code>
+                      <Button 
+                        className="btn-secondary btn-small"
+                        onClick={() => copyToClipboard(communityData.minecraft.java.address, 'java')}
+                      >
+                        {copiedIp === 'java' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="feature-list">
+                  <h4 className="feature-title">Features:</h4>
+                  <ul className="features">
+                    {communityData.minecraft.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
 
                 <a 
                   href={communityData.minecraft.squaremapUrl} 

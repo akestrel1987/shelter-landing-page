@@ -44,10 +44,20 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
 2. ✓ Hero section with gaming setup background
 3. ✓ **Minecraft section (GREEN THEME)** with:
    - Official Minecraft green color palette (#7FB83B grass green)
-   - Server information card with green accents
-   - Placeholder for server IP (to be added)
-   - "View Live Map" button linking to thesheltercommunity.servegame.net/sheltermcmap
+   - **Bedrock Edition (PC)**:
+     - Address: share-hollow.gl.at.ply.gg
+     - Port: 25662
+     - Direct IP: 147.185.221.17:25662
+     - All with copyable buttons
+   - **Bedrock Edition (Console)**:
+     - Xbox Gamertag: ShelterArkMC
+     - Instructions for Xbox Live Friends join
+   - **Java Edition 1.21.1**:
+     - Address: most-clarity.gl.joinmc.link
+   - Server features list (cross-platform, active community, custom plugins)
+   - "View Live Map" button linking to Squaremap
    - Green-themed card borders and hover effects
+   - Organized edition sections for easy navigation
 4. ✓ **Ark Survival Ascended section (CYAN/BLUE THEME)** with:
    - Official Ark cyan/blue color palette (#00D4FF bright cyan)
    - **Custom panel image** integrated at the top ("Come Relax" visual)
@@ -127,22 +137,22 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
    - Performance optimizations
 
 ## Next Tasks
-1. **Awaiting User Content**:
-   - Minecraft server IP and detailed features list
-   - Palworld estimated launch date
-2. Test all functionality (accordions, links, navigation)
+1. **Optional Enhancement**:
+   - Palworld estimated launch date (currently shows "TBA")
+2. Test all functionality (copy buttons, links, navigation)
 3. Deploy to thesheltercommunity.servegame.net
 4. Optional: Add backend for dynamic player counts and server status
 
 ## Notes
-- Ark section is **COMPLETE** with all 20 mods, player/dino/other tweaks, and custom panel image
-- Minecraft awaiting server details from user
+- **Minecraft section is COMPLETE** with Bedrock PC/Console and Java 1.21.1 connection details
+- **Ark section is COMPLETE** with all 20 mods, player/dino/other tweaks, 10 maps, and custom panel image
+- **Palworld section** has coming soon message (launch date TBA)
 - Game-specific color themes implemented:
   - Minecraft: Green (#7FB83B)
   - Ark: Cyan (#00D4FF) with orange accents
   - Palworld: Blue/Purple gradient
-- Squaremap link is ready: thesheltercommunity.servegame.net/sheltermcmap
+- All server connection details with copy-to-clipboard functionality
 - Discord link active: https://discord.gg/NUuwfMQ9zD
 - Custom Ark panel image adds visual appeal and branding
 - No backend required for static version
-- Ready for local server deployment at thesheltercommunity.servegame.net
+- **Ready for deployment** to thesheltercommunity.servegame.net
