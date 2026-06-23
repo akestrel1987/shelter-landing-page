@@ -8,7 +8,7 @@ export const communityData = {
   minecraft: {
     title: "The Shelter Minecraft",
     description: "Explore our vast survival world with custom plugins and an active community",
-    squaremapUrl: "http://thesheltercommunity.servegame.net/sheltermcmap",
+    squaremapUrl: "http://thesheltercommunity.servegame.net/sheltermcmap/",
     
     bedrockPC: {
       address: "share-hollow.gl.at.ply.gg",
