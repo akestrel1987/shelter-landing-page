@@ -3,12 +3,12 @@ export const communityData = {
   name: "The Shelter",
   tagline: "Join our thriving community of gamers",
   discordInvite: "https://discord.gg/NUuwfMQ9zD",
-  mainDomain: "thesheltercommunity.servegame.net",
+  mainDomain: "thesheltercommunity.servegame.com",
   
   minecraft: {
     title: "The Shelter Minecraft",
     description: "Explore our vast survival world with custom plugins and an active community",
-    squaremapUrl: "http://thesheltercommunity.servegame.net/sheltermcmap/",
+    squaremapUrl: "http://localhost/sheltermcmap/",
     
     bedrockPC: {
       address: "share-hollow.gl.at.ply.gg",
