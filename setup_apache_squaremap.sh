@@ -19,7 +19,7 @@ echo ""
 # Step 2: Fix the ServerName warning
 echo "Step 2: Setting ServerName..."
 if ! grep -q "ServerName" /etc/apache2/apache2.conf; then
-    echo "ServerName thesheltercommunity.servegame.net" | sudo tee -a /etc/apache2/apache2.conf
+    echo "ServerName thesheltercommunity.servegame.com" | sudo tee -a /etc/apache2/apache2.conf
     echo "✓ ServerName added"
 else
     echo "✓ ServerName already configured"
@@ -30,8 +30,8 @@ echo ""
 echo "Step 3: Creating virtual host configuration..."
 sudo tee /etc/apache2/sites-available/theshelter.conf > /dev/null << 'EOF'
 <VirtualHost *:80>
-    ServerName thesheltercommunity.servegame.net
-    ServerAdmin admin@thesheltercommunity.servegame.net
+    ServerName thesheltercommunity.servegame.com
+    ServerAdmin admin@thesheltercommunity.servegame.com
     
     DocumentRoot /var/www/html
     
@@ -118,7 +118,7 @@ echo "1. Configure router port forwarding:"
 echo "   External Port 80 → Internal IP (above) Port 80"
 echo ""
 echo "2. Test from outside your network:"
-echo "   http://thesheltercommunity.servegame.net/sheltermcmap"
+echo "   http://thesheltercommunity.servegame.com/sheltermcmap"
 echo ""
 echo "3. Check Apache logs if issues:"
 echo "   sudo tail -f /var/log/apache2/theshelter-error.log"

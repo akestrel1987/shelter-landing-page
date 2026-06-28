@@ -108,7 +108,7 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
 1. **Content Customization**:
    - ✓ Community name updated to "The Shelter"
    - ✓ Discord invite link updated: https://discord.gg/NUuwfMQ9zD
-   - ✓ Squaremap URL updated: thesheltercommunity.servegame.net/sheltermcmap
+   - ✓ Squaremap URL updated: thesheltercommunity.servegame.com/sheltermcmap
    - ✓ **Ark server details COMPLETE** with all mods, tweaks, and search instructions
    - ⏳ **NEEDED**: Minecraft server IP and features list
    - ⏳ **NEEDED**: Palworld estimated launch date
@@ -145,7 +145,7 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
 1. **Optional Enhancement**:
    - Palworld estimated launch date (currently shows "TBA")
 2. Test all functionality (copy buttons, links, navigation)
-3. Deploy to thesheltercommunity.servegame.net
+3. Deploy to thesheltercommunity.servegame.com
 4. Optional: Add backend for dynamic player counts and server status
 
 ## Notes
@@ -160,4 +160,4 @@ Build a landing page for Minecraft, Ark Survival Ascended, and Palworld Discord 
 - Discord link active: https://discord.gg/NUuwfMQ9zD
 - Custom Ark panel image adds visual appeal and branding
 - No backend required for static version
-- **Ready for deployment** to thesheltercommunity.servegame.net
+- **Ready for deployment** to thesheltercommunity.servegame.com

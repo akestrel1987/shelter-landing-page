@@ -39,7 +39,7 @@ yarn install
 ### 5. Create .env File
 ```bash
 cat > .env << 'EOF'
-REACT_APP_BACKEND_URL=http://thesheltercommunity.servegame.net
+REACT_APP_BACKEND_URL=http://thesheltercommunity.servegame.com
 EOF
 ```
 
@@ -68,8 +68,8 @@ sudo nano /etc/apache2/sites-available/theshelter.conf
 Replace with:
 ```apache
 <VirtualHost *:80>
-    ServerName thesheltercommunity.servegame.net
-    ServerAdmin admin@thesheltercommunity.servegame.net
+    ServerName thesheltercommunity.servegame.com
+    ServerAdmin admin@thesheltercommunity.servegame.com
     
     DocumentRoot /var/www/html
     

@@ -64,7 +64,7 @@ echo ""
 # Step 4: Create .env file
 echo "Step 4: Creating environment configuration..."
 cat > .env << 'ENVEOF'
-REACT_APP_BACKEND_URL=http://thesheltercommunity.servegame.net
+REACT_APP_BACKEND_URL=http://thesheltercommunity.servegame.com
 ENVEOF
 
 echo "✓ .env file created"
@@ -140,7 +140,7 @@ echo ""
 echo "Next Steps:"
 echo "1. Update Apache configuration (see below)"
 echo "2. Restart Apache: sudo systemctl restart apache2"
-echo "3. Test: http://thesheltercommunity.servegame.net"
+echo "3. Test: http://thesheltercommunity.servegame.com"
 echo ""
 echo "For future updates, run: ./rebuild.sh"
 echo ""
@@ -154,8 +154,8 @@ echo "Use this configuration:"
 echo ""
 cat << 'APACHEEOF'
 <VirtualHost *:80>
-    ServerName thesheltercommunity.servegame.net
-    ServerAdmin admin@thesheltercommunity.servegame.net
+    ServerName thesheltercommunity.servegame.com
+    ServerAdmin admin@thesheltercommunity.servegame.com
     
     DocumentRoot /var/www/html
     
