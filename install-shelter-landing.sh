@@ -2,7 +2,7 @@
 # The Shelter Landing Page - Complete Installation Script
 # Run this on your Lubuntu server
 #
-# Workflow: Apache serves DIRECTLY out of /var/www/theshelter/build, so a
+# Workflow: Apache serves DIRECTLY out of /var/www/theshelter/frontend/build, so a
 # fresh `yarn build` is instantly live. No "copy to /var/www/html" step.
 
 set -e
@@ -63,26 +63,29 @@ fi
 
 echo ""
 
-# Step 4: Create .env file
+# Step 4: Create .env file (lives next to package.json inside frontend/)
 echo "Step 4: Creating environment configuration..."
+cd /var/www/theshelter/frontend
 cat > .env << 'ENVEOF'
 REACT_APP_BACKEND_URL=http://thesheltercommunity.servegame.com:8080
 ENVEOF
 
-echo ".env file created"
+echo ".env file created at /var/www/theshelter/frontend/.env"
 echo ""
 
 # Step 5: Install dependencies
 echo "Step 5: Installing dependencies..."
+cd /var/www/theshelter/frontend
 yarn install
 echo "Dependencies installed"
 echo ""
 
 # Step 6: Build for production
 echo "Step 6: Building React app for production..."
+cd /var/www/theshelter/frontend
 yarn build
 
-if [ ! -d "build" ]; then
+if [ ! -d "/var/www/theshelter/frontend/build" ]; then
     echo "Build failed - build directory not created"
     exit 1
 fi
@@ -91,7 +94,7 @@ fi
 sudo chown -R $USER:www-data /var/www/theshelter
 sudo chmod -R 750 /var/www/theshelter
 
-echo "Build complete! Apache will serve directly from /var/www/theshelter/build"
+echo "Build complete! Apache will serve directly from /var/www/theshelter/frontend/build"
 echo ""
 
 # Step 7: Create rebuild script for future updates
@@ -99,20 +102,21 @@ echo "Step 7: Creating rebuild script..."
 cat > /var/www/theshelter/rebuild.sh << 'REBUILDEOF'
 #!/bin/bash
 # Re-build the landing page. Because Apache's DocumentRoot points at
-# /var/www/theshelter/build, the new build is live as soon as this finishes.
+# /var/www/theshelter/frontend/build, the new build is live as soon as this finishes.
 set -e
 cd /var/www/theshelter
 if [ -d ".git" ]; then
     echo "Pulling latest changes..."
     git pull
 fi
+cd /var/www/theshelter/frontend
 echo "Installing dependencies..."
 yarn install
 echo "Building..."
 yarn build
 echo "Fixing permissions for Apache..."
-sudo chown -R $USER:www-data /var/www/theshelter/build
-sudo chmod -R 750 /var/www/theshelter/build
+sudo chown -R $USER:www-data /var/www/theshelter/frontend/build
+sudo chmod -R 750 /var/www/theshelter/frontend/build
 echo "Done - refresh the browser."
 REBUILDEOF
 
@@ -150,9 +154,9 @@ cat << 'APACHEEOF'
     ServerAdmin admin@thesheltercommunity.servegame.com
 
     # Serve DIRECTLY out of the React build folder so `yarn build` is instantly live
-    DocumentRoot /var/www/theshelter/build
+    DocumentRoot /var/www/theshelter/frontend/build
 
-    <Directory /var/www/theshelter/build>
+    <Directory /var/www/theshelter/frontend/build>
         Options -Indexes +FollowSymLinks
         AllowOverride All
         Require all granted
