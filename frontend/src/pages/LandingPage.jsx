@@ -440,7 +440,17 @@ const LandingPage = () => {
           <div className="squaremap-iframe-container">
             {isMapOpen && (
               <iframe
-                src={communityData.minecraft.squaremapUrl}
+                src={(() => {
+                  const url = communityData.minecraft.squaremapUrl || '/sheltermcmap/';
+                  // If the configured value is a relative path, resolve it
+                  // against the current page's origin (protocol + host + port).
+                  // This makes the live map work on any port (8080, etc.)
+                  // and from any domain/IP the visitor uses.
+                  if (typeof window !== 'undefined' && url.startsWith('/')) {
+                    return window.location.origin + url;
+                  }
+                  return url;
+                })()}
                 title="The Shelter Minecraft Live Map"
                 className="squaremap-iframe"
                 loading="lazy"

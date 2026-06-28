@@ -82,7 +82,7 @@ sudo nano /etc/nginx/sites-available/squaremap
 ```nginx
 server {
     listen 80;
-    server_name thesheltercommunity.servegame.net;
+    server_name thesheltercommunity.servegame.com;
 
     # Squaremap location
     location /sheltermcmap {
@@ -154,7 +154,7 @@ curl http://localhost/sheltermcmap
 
 From your browser (NOT on the server):
 ```
-http://thesheltercommunity.servegame.net/sheltermcmap
+http://thesheltercommunity.servegame.com/sheltermcmap
 ```
 
 ---
@@ -166,7 +166,7 @@ http://thesheltercommunity.servegame.net/sheltermcmap
 **1. Check NoIP DNS:**
 ```bash
 # Check what IP your domain resolves to
-nslookup thesheltercommunity.servegame.net
+nslookup thesheltercommunity.servegame.com
 
 # Compare with your public IP
 curl ifconfig.me
@@ -175,9 +175,9 @@ curl ifconfig.me
 **2. Check if port 80 is reachable from outside:**
 ```bash
 # From another computer/phone (not on your network):
-telnet thesheltercommunity.servegame.net 80
+telnet thesheltercommunity.servegame.com 80
 # or
-nc -zv thesheltercommunity.servegame.net 80
+nc -zv thesheltercommunity.servegame.com 80
 ```
 
 **3. Router Port Forwarding Settings Should Be:**
@@ -200,7 +200,7 @@ server {
 }
 ```
 
-Then access via: `http://thesheltercommunity.servegame.net:8080/sheltermcmap`
+Then access via: `http://thesheltercommunity.servegame.com:8080/sheltermcmap`
 
 And forward router port 8080 → server port 8080.
 
@@ -236,7 +236,7 @@ curl http://localhost/sheltermcmap
 curl ifconfig.me
 
 # 5. What does your domain resolve to?
-nslookup thesheltercommunity.servegame.net
+nslookup thesheltercommunity.servegame.com
 
 # 6. Check firewall
 sudo ufw status
@@ -253,7 +253,7 @@ If you end up using a different port (like 8080), update the landing page:
 
 Edit `/app/frontend/src/data/mock.js`:
 ```javascript
-squaremapUrl: "http://thesheltercommunity.servegame.net:8080/sheltermcmap",
+squaremapUrl: "http://thesheltercommunity.servegame.com:8080/sheltermcmap",
 ```
 
 ---

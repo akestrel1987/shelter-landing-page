@@ -15,7 +15,7 @@ echo ""
 
 echo ""
 echo "=== What your domain resolves to ==="
-nslookup thesheltercommunity.servegame.net
+nslookup thesheltercommunity.servegame.com
 
 echo ""
 echo "=== Apache Virtual Hosts ==="

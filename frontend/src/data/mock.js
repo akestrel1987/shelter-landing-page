@@ -8,7 +8,11 @@ export const communityData = {
   minecraft: {
     title: "The Shelter Minecraft",
     description: "Explore our vast survival world with custom plugins and an active community",
-    squaremapUrl: "http://localhost/sheltermcmap/",
+    // Relative path: iframe inherits the same protocol, host, and port as the
+    // page the visitor is currently on. This means the live map works no matter
+    // what port Apache is configured to use (8080, 9090, etc.) and works for
+    // every visitor regardless of how they reach the site.
+    squaremapUrl: "/sheltermcmap/",
     
     bedrockPC: {
       address: "share-hollow.gl.at.ply.gg",
